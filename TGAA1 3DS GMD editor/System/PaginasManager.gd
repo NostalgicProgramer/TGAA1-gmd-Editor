@@ -70,7 +70,6 @@ func actualizar_interfaz():
 	# 1. Botones Prev/Next
 	btn_prev.disabled = !hay_multiples or (indice_pagina_actual == 0)
 	btn_next.disabled = !hay_multiples or (indice_pagina_actual == total - 1)
-	btn_copy.disabled = !hay_multiples or (indice_pagina_actual == total - 1)
 	
 	# 2. Contador
 	if contador:

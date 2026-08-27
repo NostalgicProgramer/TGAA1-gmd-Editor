@@ -98,6 +98,11 @@ func cambiar_vista(nueva_vista):
 func _process(_delta):
 	if edit_principal and edit_principal.text != null:
 		_actualizar_previsualizacion()
+		
+		if btn_copiar:
+			var label_activo = labels.get(vista_actual)
+			# El botón estará habilitado solo si el label tiene texto (ignorando espacios vacíos)
+			btn_copiar.disabled = (label_activo == null or label_activo.text.strip_edges().is_empty())
 
 func _actualizar_previsualizacion():
 	# Elegimos qué label actualizar basándonos en la vista actual
