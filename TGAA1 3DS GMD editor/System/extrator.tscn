@@ -1,0 +1,389 @@
+[gd_scene load_steps=17 format=3 uid="uid://163setn3hdr"]
+
+[ext_resource type="Script" uid="uid://mxy4gtwoebxi" path="res://System/UI_Principal.gd" id="1_70n0a"]
+[ext_resource type="Texture2D" uid="uid://cpqy55apcgl3c" path="res://Imagenes/Simulador.jpg" id="3_lbq51"]
+[ext_resource type="Theme" uid="uid://7digcyyoy2mh" path="res://Temas/Botones.tres" id="3_u1fh3"]
+[ext_resource type="FontFile" uid="uid://cxd7834lvex8e" path="res://Fonts/suburga-2-semi-condensed-regular.otf" id="4_kyy46"]
+[ext_resource type="FontFile" uid="uid://d0i7sk1cdsc77" path="res://Fonts/FOT-ModeMinBLargeStd-R.otf" id="5_hu0fh"]
+[ext_resource type="Script" uid="uid://bh21n6nxkesvi" path="res://System/SimuladorAA.gd" id="5_lbq51"]
+[ext_resource type="Texture2D" uid="uid://cxemscp2gf0qb" path="res://Imagenes/Simulador5.png" id="6_hu0fh"]
+[ext_resource type="Script" uid="uid://b26x8ciwe5ewx" path="res://System/namehelper.gd" id="6_ifhey"]
+[ext_resource type="Texture2D" uid="uid://ckkjq3kb1a8au" path="res://Imagenes/Simulador2.jpg" id="6_u1fh3"]
+[ext_resource type="Texture2D" uid="uid://dbtd17yb4lhnd" path="res://Imagenes/Simulador3.jpg" id="7_glhut"]
+[ext_resource type="Script" uid="uid://bp8h4rdmeyjg1" path="res://System/PaginasManager.gd" id="7_u1fh3"]
+[ext_resource type="Texture2D" uid="uid://e6iol4qcpqfc" path="res://Imagenes/Simulador4.jpg" id="8_hqf2g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nxps"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_uk3tm"]
+Panel/styles/panel = SubResource("StyleBoxFlat_5nxps")
+
+[sub_resource type="FontVariation" id="FontVariation_5nxps"]
+base_font = ExtResource("4_kyy46")
+
+[sub_resource type="FontVariation" id="FontVariation_depkx"]
+base_font = ExtResource("5_hu0fh")
+
+[node name="node" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_70n0a")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uk3tm")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 361.0
+offset_top = 31.0
+offset_right = -32.0
+offset_bottom = 241.0
+grow_horizontal = 2
+wrap_mode = 1
+
+[node name="BtnAbrir" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1127.0
+offset_top = 21.0
+offset_right = -1007.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme = ExtResource("3_u1fh3")
+text = "Abrir GMD
+"
+
+[node name="BtnGuardar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -962.0
+offset_top = 21.0
+offset_right = -815.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme = ExtResource("3_u1fh3")
+text = "Guardar"
+
+[node name="BtnCopy" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 445.0
+offset_right = -127.0
+offset_bottom = 477.0
+grow_horizontal = 0
+theme = ExtResource("3_u1fh3")
+text = "Copiar"
+
+[node name="BtnNext" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -182.0
+offset_top = 386.0
+offset_right = -125.0
+offset_bottom = 418.0
+grow_horizontal = 0
+theme = ExtResource("3_u1fh3")
+text = "Sig.
+"
+
+[node name="BtnPrev" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -246.0
+offset_top = 386.0
+offset_right = -193.0
+offset_bottom = 418.0
+grow_horizontal = 0
+theme = ExtResource("3_u1fh3")
+text = "Ant.
+"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 110.0
+offset_right = 337.0
+offset_bottom = 572.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+offset_left = 106.0
+offset_top = 81.0
+offset_right = 250.0
+offset_bottom = 104.0
+text = "Secciones de texto"
+
+[node name="Simulacion" type="Sprite2D" parent="."]
+position = Vector2(627, 412)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_lbq51")
+script = ExtResource("5_lbq51")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -316.857
+offset_top = -334.143
+offset_right = -404.857
+offset_bottom = -234.143
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "(¡He estado tan nerviosa desde que llegué que
+no recuerdo absolutamente nada de la ciudad!)"
+autowrap_mode = 0
+
+[node name="Simulacion6" type="Sprite2D" parent="Simulacion"]
+texture = ExtResource("6_hu0fh")
+script = ExtResource("6_ifhey")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion/Simulacion6"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -333.0
+offset_top = -382.0
+offset_right = -945.0
+offset_bottom = -341.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0.252379, 0.218072, 0.0964413, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = SubResource("FontVariation_depkx")
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "Ryunosuke"
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Simulacion2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(627, 412)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_u1fh3")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion2"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -563.0
+offset_right = -318.0
+offset_bottom = -387.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -4
+theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "La bomba de tiempo que destruyó
+el tribunal. Estaba escondida
+dentro de un animal de peluche
+cuando fue detonada."
+autowrap_mode = 0
+
+[node name="Simulacion3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(627, 412)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_glhut")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion3"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -574.0
+offset_right = -379.0
+offset_bottom = -349.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -4
+theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Un abogado joven de mi
+agencia. Fue herido en el
+atentado al tribunal."
+autowrap_mode = 0
+
+[node name="Simulacion4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(627, 412)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_glhut")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion4"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -319.0
+offset_top = -319.0
+offset_right = -531.0
+offset_bottom = -232.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/line_separation = -4
+theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "Un abogado joven de mi agencia.
+Fue herido en el atentado al tribunal."
+autowrap_mode = 0
+
+[node name="Simulacion5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(627, 412)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_hqf2g")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion5"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -664.0
+offset_right = -303.0
+offset_bottom = -564.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "Mi número de identificación de estudiante
+está grabado en la parte posterior del pin."
+autowrap_mode = 0
+
+[node name="FileDialog" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+position = Vector2i(250, 47)
+ok_button_text = "Open"
+cancel_button_text = "Cancelar"
+file_mode = 0
+access = 2
+filters = PackedStringArray(".bin")
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Guardar Script"
+position = Vector2i(265, 47)
+cancel_button_text = "Cancelar"
+access = 2
+filters = PackedStringArray(".bin")
+
+[node name="PageManager" type="Node" parent="."]
+script = ExtResource("7_u1fh3")
+
+[node name="Label" type="Label" parent="PageManager"]
+offset_left = 935.0
+offset_top = 279.0
+offset_right = 995.0
+offset_bottom = 302.0
+text = "Paginas"
+
+[node name="Label2" type="Label" parent="PageManager"]
+offset_left = 946.0
+offset_top = 250.0
+offset_right = 1067.0
+offset_bottom = 273.0
+text = "modo paginado"
+
+[node name="Contador" type="Label" parent="PageManager"]
+offset_left = 983.0
+offset_top = 316.0
+offset_right = 1026.0
+offset_bottom = 339.0
+text = "/1000"
+
+[node name="HSlider" type="HSlider" parent="PageManager"]
+offset_left = 906.0
+offset_top = 346.0
+offset_right = 1028.0
+offset_bottom = 389.0
+
+[node name="LineEditSearch" type="LineEdit" parent="PageManager"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 907.0
+offset_top = 309.0
+offset_right = -176.438
+offset_bottom = 352.0
+grow_horizontal = 2
+
+[node name="label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 922.0
+offset_top = 505.0
+offset_right = 1007.0
+offset_bottom = 528.0
+text = "Simulación"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 537.0
+offset_right = 1031.0
+offset_bottom = 568.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "Dialogos"
+popup/item_0/id = 0
+popup/item_1/text = "Pruebas"
+popup/item_1/id = 1
+popup/item_2/text = "Ubicación"
+popup/item_2/id = 2
+popup/item_3/text = "ComUbi"
+popup/item_3/id = 3
+popup/item_4/text = "Examinación"
+popup/item_4/id = 4
+
+[node name="CheckModoPaginado" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 252.0
+offset_right = 945.0
+offset_bottom = 276.0
+
+[connection signal="text_changed" from="TextEdit" to="Simulacion" method="_on_text_changed"]
+[connection signal="item_selected" from="OptionButton" to="Simulacion" method="_on_option_button_item_selected"]
