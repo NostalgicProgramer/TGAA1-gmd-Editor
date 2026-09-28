@@ -27,35 +27,60 @@ const CONFIG_PERSONAJES = {
 	"E041 39 70": { "texto": "¿?", "visible": true },
 	"E041 0 71": { "texto": "¿?", "visible": true },
 	"E041 47 70": { "texto": "¿?", "visible": true },
+	"E041 36 70": { "texto": "¿?", "visible": true },
+	"E041 2 70": { "texto": "¿?", "visible": true },
 	
 	#===========Nombres==============
 	
 	"E041 13 11": { "texto": "Mikotoba", "visible": true },
+	
 	"E041 2 1": { "texto": "Holmes", "visible": true },
 	"E041 21 14": { "texto": "Kazuma", "visible": true },
+	
 	"E041 30 24": { "texto": "Alguacil", "visible": true },
 	"E041 75 24": { "texto": "Alguacil", "visible": true },
+	"E041 29 24": { "texto": "Alguacil", "visible": true },
+	
 	"E041 22 15": { "texto": "Juez", "visible": true },
 	"E041 0 4": { "texto": "Juez", "visible": true },
 	"E041 15 15": { "texto": "Juez", "visible": true },
+	
 	"E041 1 0": { "texto": "Ryunosuke", "visible": true },
 	"E041 0 0": { "texto": "Ryunosuke", "visible": true },
+	
 	"E041 14 13": { "texto": "Stronghart", "visible": true },
+	
 	"E041 3 2": { "texto": "Susato", "visible": true },
 	"E041 9 2": { "texto": "Susato", "visible": true },
-	"E041 29 24": { "texto": "Alguacil", "visible": true },
+	
 	"E041 23 16": { "texto": "Auchi", "visible": true },
+	
 	"E041 25 19": { "texto": "Hosonaga", "visible": true },
+	"E041 42 19": { "texto": "Hosonaga", "visible": true },
+	
 	"E041 27 23": { "texto": "Nosa", "visible": true },
+	
 	"E041 26 22": { "texto": "Korekuta", "visible": true },
+	
 	"E041 24 17": { "texto": "Brett", "visible": true },
+	
 	"E041 39 25": { "texto": "Marinero", "visible": true },
+	"E041 42 25": { "texto": "Marinero", "visible": true },
+	
+	"E041 38 27": { "texto": "Strogenov", "visible": true },
+	
 	"E041 48 32": { "texto": "Beppo", "visible": true },
+	
 	"E041 49 33": { "texto": "Fairplay", "visible": true },
+	
 	"E041 50 34": { "texto": "Furst", "visible": true },
+	
 	"E041 47 31": { "texto": "McGilded", "visible": true },
+	
 	"E041 5 6": { "texto": "Gina", "visible": true },
+	
 	"E041 16 8": { "texto": "Van Zieks", "visible": true },
+	
 	"E041 36 28": { "texto": "Roylott", "visible": true },
 	
 	#===========Jurado==============

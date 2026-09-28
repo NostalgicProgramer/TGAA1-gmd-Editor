@@ -32,6 +32,7 @@ const TAG_TRANSLATOR = {
 	
 	# --- COMANDOS ---
 	"CNTR": "[center]",
+	"PAGE": "\n",
 	
 	# --- COLORES ---
 	"E005": "[/color]", # c0 - white
@@ -43,7 +44,7 @@ const TAG_TRANSLATOR = {
 	"E011": "[color=#808080]", # c6 - gray
 	"E012": "[color=#0000FF]", # c7 - blue
 	"E013": "[color=#FF0000]", # c8 - red
-	"E014": "[color=#F5F5DC]", # c9 - light beige
+	"E014": "[color=#D8D875]", # c9 - light beige
 	"E015": "[color=#0000FF]", # c10 - blue
 	"E016": "[color=#00FF00]", # c11 - green
 	"E017": "[color=#00FF00]", # c12 - green
