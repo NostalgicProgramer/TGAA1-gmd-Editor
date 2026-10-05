@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://163setn3hdr"]
+[gd_scene load_steps=18 format=3 uid="uid://163setn3hdr"]
 
 [ext_resource type="Script" uid="uid://mxy4gtwoebxi" path="res://System/UI_Principal.gd" id="1_70n0a"]
 [ext_resource type="Texture2D" uid="uid://cpqy55apcgl3c" path="res://Imagenes/Simulador.jpg" id="3_lbq51"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dbtd17yb4lhnd" path="res://Imagenes/Simulador3.jpg" id="7_glhut"]
 [ext_resource type="Script" uid="uid://bp8h4rdmeyjg1" path="res://System/PaginasManager.gd" id="7_u1fh3"]
 [ext_resource type="Texture2D" uid="uid://e6iol4qcpqfc" path="res://Imagenes/Simulador4.jpg" id="8_hqf2g"]
+[ext_resource type="Texture2D" uid="uid://rrjlroqtt4ti" path="res://Imagenes/Ryu.png" id="12_bpxd1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nxps"]
 bg_color = Color(0, 0, 0, 1)
@@ -272,6 +273,9 @@ visible = false
 position = Vector2(627, 412)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("8_hqf2g")
+
+[node name="character" type="Sprite2D" parent="Simulacion5"]
+texture = ExtResource("12_bpxd1")
 
 [node name="Label" type="RichTextLabel" parent="Simulacion5"]
 anchors_preset = 12

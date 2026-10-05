@@ -1,5 +1,14 @@
 extends Sprite2D
 
+const RETRATOS = {
+	"Ryunosuke": preload("res://Imagenes/Ryu.png"),
+	"Holmes": preload("res://Imagenes/Holmes.png"),
+	"Susato": preload("res://Imagenes/Susato.png"),
+	"Kazuma": preload("res://Imagenes/Kazu.png"),
+	"Iris": preload("res://Imagenes/Iris.png"),
+	# Agrega aquí las texturas de los demás personajes...
+}
+
 const CONFIG_PERSONAJES = {
 	#===========Sistema==============
 	"E041 0 10": { "texto": "Modo oculto", "visible": false },
@@ -97,6 +106,8 @@ const CONFIG_PERSONAJES = {
 @onready var edit_principal = $"../../TextEdit"
 @onready var label_nombre = $Label 
 
+@onready var sprite_personaje_examinacion = $"../../Simulacion5/character"
+
 func _process(_delta):
 	if edit_principal:
 		_actualizar_previsualizacion()
@@ -119,9 +130,12 @@ func _actualizar_previsualizacion():
 					# Aplicamos visibilidad
 					self.visible = config.visible
 					
-					# Si es visible, actualizamos el texto
+					# Si es visible, actualizamos el texto y la imagen de examinación
 					if config.visible:
 						label_nombre.text = config.texto
+						_actualizar_sprite_examinacion(config.texto)
+					else:
+						_actualizar_sprite_examinacion("")
 					
 					comando_encontrado = true
 				
@@ -131,6 +145,22 @@ func _actualizar_previsualizacion():
 		else:
 			i += 1
 	
-	# Si no se encontró ningún comando en todo el texto, ocultamos el nodo
+	# Si no se encontró ningún comando en todo el texto, ocultamos el nodo y el sprite
 	if not comando_encontrado:
 		self.visible = false
+		_actualizar_sprite_examinacion("")
+
+func _actualizar_sprite_examinacion(nombre_personaje: String):
+	# Obtenemos el nodo mediante node path seguro para evitar que la app crashee si no existe
+	if not has_node("../../Simulacion5/character"):
+		return
+		
+	var sprite_personaje = get_node("../../Simulacion5/character") as Sprite2D
+	if not is_instance_valid(sprite_personaje):
+		return
+
+	if RETRATOS.has(nombre_personaje):
+		sprite_personaje.texture = RETRATOS[nombre_personaje]
+		sprite_personaje.visible = true
+	else:
+		sprite_personaje.visible = false
