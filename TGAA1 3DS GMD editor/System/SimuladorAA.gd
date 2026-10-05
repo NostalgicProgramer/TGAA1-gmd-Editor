@@ -14,7 +14,6 @@ extends Sprite2D
 	"UBICACION": $"../Simulacion3",
 	"COMUBICACION": $"../Simulacion4",
 	"EXAMINACION": $"../Simulacion5",
-	#"EXAMINACION": $"../Simulacion5/character",
 }
 
 # Referencias a los labels correspondientes a cada vista
