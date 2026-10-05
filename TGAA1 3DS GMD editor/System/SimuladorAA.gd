@@ -14,6 +14,7 @@ extends Sprite2D
 	"UBICACION": $"../Simulacion3",
 	"COMUBICACION": $"../Simulacion4",
 	"EXAMINACION": $"../Simulacion5",
+	"DOCUMETOS": $"../Simulacion6",
 }
 
 # Referencias a los labels correspondientes a cada vista
@@ -23,6 +24,7 @@ extends Sprite2D
 	"UBICACION": $"../Simulacion3/Label",
 	"COMUBICACION": $"../Simulacion4/Label",
 	"EXAMINACION": $"../Simulacion5/Label",
+	"DOCUMETOS": $"../Simulacion6/Label",
 }
 
 var vista_actual = "DIALOGO"
@@ -86,8 +88,10 @@ func _on_option_button_item_selected(index):
 		cambiar_vista("UBICACION")
 	elif index == 3:
 		cambiar_vista("COMUBICACION")
-	else:
+	elif index == 4:
 		cambiar_vista("EXAMINACION")
+	else:
+		cambiar_vista("DOCUMETOS")
 
 func cambiar_vista(nueva_vista):
 	if vistas.has(nueva_vista):

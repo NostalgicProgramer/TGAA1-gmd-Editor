@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://163setn3hdr"]
+[gd_scene load_steps=19 format=3 uid="uid://163setn3hdr"]
 
 [ext_resource type="Script" uid="uid://mxy4gtwoebxi" path="res://System/UI_Principal.gd" id="1_70n0a"]
 [ext_resource type="Texture2D" uid="uid://cpqy55apcgl3c" path="res://Imagenes/Simulador.jpg" id="3_lbq51"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bp8h4rdmeyjg1" path="res://System/PaginasManager.gd" id="7_u1fh3"]
 [ext_resource type="Texture2D" uid="uid://e6iol4qcpqfc" path="res://Imagenes/Simulador4.jpg" id="8_hqf2g"]
 [ext_resource type="Texture2D" uid="uid://rrjlroqtt4ti" path="res://Imagenes/Ryu.png" id="12_bpxd1"]
+[ext_resource type="Texture2D" uid="uid://b181oktusv020" path="res://Imagenes/Simulador6.jpg" id="13_ojhb3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nxps"]
 bg_color = Color(0, 0, 0, 1)
@@ -297,6 +298,37 @@ text = "Mi número de identificación de estudiante
 está grabado en la parte posterior del pin."
 autowrap_mode = 0
 
+[node name="Simulacion6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(627, 412)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_ojhb3")
+
+[node name="Label" type="RichTextLabel" parent="Simulacion6"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -326.0
+offset_top = -659.0
+offset_right = -378.0
+offset_bottom = -242.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_font_sizes/normal_font_size = 31
+bbcode_enabled = true
+text = "- Víctima:
+   John H. Watson
+   Hombre / Británico
+
+- Hora estimada de muerte:
+   19 de noviembre
+   Alrededor de las 14:00"
+autowrap_mode = 0
+
 [node name="FileDialog" type="FileDialog" parent="."]
 auto_translate_mode = 1
 title = "Open a File"
@@ -370,7 +402,7 @@ offset_right = 1031.0
 offset_bottom = 568.0
 selected = 0
 fit_to_longest_item = false
-item_count = 5
+item_count = 6
 popup/item_0/text = "Dialogos"
 popup/item_0/id = 0
 popup/item_1/text = "Pruebas"
@@ -381,6 +413,8 @@ popup/item_3/text = "ComUbi"
 popup/item_3/id = 3
 popup/item_4/text = "Examinación"
 popup/item_4/id = 4
+popup/item_5/text = "Documentos"
+popup/item_5/id = 5
 
 [node name="CheckModoPaginado" type="CheckButton" parent="."]
 layout_mode = 0
