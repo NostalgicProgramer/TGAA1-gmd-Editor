@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://163setn3hdr"]
+[gd_scene load_steps=24 format=3 uid="uid://163setn3hdr"]
 
 [ext_resource type="Script" uid="uid://mxy4gtwoebxi" path="res://System/UI_Principal.gd" id="1_70n0a"]
 [ext_resource type="Texture2D" uid="uid://cpqy55apcgl3c" path="res://Imagenes/Simulador.jpg" id="3_lbq51"]
@@ -21,11 +21,26 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="Theme" id="Theme_uk3tm"]
 Panel/styles/panel = SubResource("StyleBoxFlat_5nxps")
 
-[sub_resource type="FontVariation" id="FontVariation_5nxps"]
+[sub_resource type="FontVariation" id="FontVariation_lww6u"]
 base_font = ExtResource("4_kyy46")
 
 [sub_resource type="FontVariation" id="FontVariation_depkx"]
 base_font = ExtResource("5_hu0fh")
+
+[sub_resource type="FontVariation" id="FontVariation_5nxps"]
+base_font = ExtResource("5_hu0fh")
+
+[sub_resource type="FontVariation" id="FontVariation_ojhb3"]
+base_font = ExtResource("4_kyy46")
+
+[sub_resource type="FontVariation" id="FontVariation_ear7o"]
+base_font = ExtResource("4_kyy46")
+
+[sub_resource type="FontVariation" id="FontVariation_blrme"]
+base_font = ExtResource("4_kyy46")
+
+[sub_resource type="FontVariation" id="FontVariation_b5tfa"]
+base_font = ExtResource("4_kyy46")
 
 [node name="node" type="Control"]
 layout_mode = 3
@@ -157,7 +172,7 @@ offset_bottom = -234.143
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/line_separation = 4
-theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_fonts/normal_font = SubResource("FontVariation_lww6u")
 theme_override_font_sizes/normal_font_size = 31
 bbcode_enabled = true
 text = "(¡He estado tan nerviosa desde que llegué que
@@ -200,21 +215,20 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -94.0
-offset_top = -563.0
-offset_right = -318.0
+offset_left = -91.0
+offset_top = -559.0
+offset_right = -305.0
 offset_bottom = -387.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = -4
+theme_override_constants/line_separation = 4
 theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 23
 bbcode_enabled = true
-text = "La bomba de tiempo que destruyó
-el tribunal. Estaba escondida
-dentro de un animal de peluche
-cuando fue detonada."
+text = "El fiscal del caso.
+Parece no aprobar lo que la cultura
+occidental le ha hecho a la sociedad."
 autowrap_mode = 0
 
 [node name="Simulacion3" type="Sprite2D" parent="."]
@@ -236,7 +250,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -4
-theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_fonts/normal_font = SubResource("FontVariation_ojhb3")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "Un abogado joven de mi
@@ -262,7 +276,7 @@ offset_bottom = -232.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/line_separation = -4
-theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_fonts/normal_font = SubResource("FontVariation_ear7o")
 theme_override_font_sizes/normal_font_size = 27
 bbcode_enabled = true
 text = "Un abogado joven de mi agencia.
@@ -291,7 +305,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 5
-theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_fonts/normal_font = SubResource("FontVariation_blrme")
 theme_override_font_sizes/normal_font_size = 31
 bbcode_enabled = true
 text = "Mi número de identificación de estudiante
@@ -317,7 +331,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 5
-theme_override_fonts/normal_font = SubResource("FontVariation_5nxps")
+theme_override_fonts/normal_font = SubResource("FontVariation_b5tfa")
 theme_override_font_sizes/normal_font_size = 31
 bbcode_enabled = true
 text = "- Víctima:

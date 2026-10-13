@@ -66,12 +66,16 @@ const CONFIG_PERSONAJES = {
 	
 	"E041 25 19": { "texto": "Hosonaga", "visible": true },
 	"E041 42 19": { "texto": "Hosonaga", "visible": true },
+	"E260 25 19": { "texto": "Hosonaga", "visible": true },
 	
 	"E041 27 23": { "texto": "Nosa", "visible": true },
+	"E260 27 23": { "texto": "Nosa", "visible": true },
 	
 	"E041 26 22": { "texto": "Korekuta", "visible": true },
+	"E260 26 22": { "texto": "Korekuta", "visible": true },
 	
 	"E041 24 17": { "texto": "Brett", "visible": true },
+	"E260 24 17": { "texto": "Brett", "visible": true },
 	
 	"E041 39 25": { "texto": "Marinero", "visible": true },
 	"E041 42 25": { "texto": "Marinero", "visible": true },
@@ -91,6 +95,8 @@ const CONFIG_PERSONAJES = {
 	"E041 16 8": { "texto": "Van Zieks", "visible": true },
 	
 	"E041 36 28": { "texto": "Roylott", "visible": true },
+	
+	"E041 37 30": { "texto": "Pavlova", "visible": true },
 	
 	#===========Jurado==============
 	
